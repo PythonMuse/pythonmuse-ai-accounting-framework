@@ -2,6 +2,8 @@
 
 *Copy-paste ready structure for starting any accounting AI project.*
 
+> **Start with sample data.** When setting up a new project, populate `data/raw/` with the synthetic data provided in this framework or your own masked test files first. Do not add real company data until you have reviewed your data handling policies and confirmed that appropriate controls (hooks, .gitignore, local-first processing) are in place. See [Safe AI Data Workflows](https://github.com/PythonMuse/ai-ledger/tree/main/articles/06-safe-ai-data-workflows). When the workflow moves to production, ensure it is properly logged — see [AI Governance for Controllers](https://github.com/PythonMuse/ai-ledger/tree/main/articles/07-ai-governance-for-controllers).
+
 ---
 
 ## Full Structure

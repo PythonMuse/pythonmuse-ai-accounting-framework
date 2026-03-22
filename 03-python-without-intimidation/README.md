@@ -2,6 +2,8 @@
 
 *You do not need to become a developer. You need to understand what the code is doing -- the same way you follow a complex Excel formula.*
 
+> **New to Python?** If you have not installed Python yet, start with [Where to Start with AI](https://github.com/PythonMuse/ai-ledger/tree/main/articles/00.5-where-to-start-with-ai) — it walks you through getting Python, VS Code, and your AI tools set up step by step.
+
 ---
 
 ## The Excel Analogy
@@ -142,6 +144,8 @@ All data is synthetic. No real financial information is included.
 5. Compare the output to the source CSV file
 
 You will be surprised how quickly it starts to make sense.
+
+> **PythonMuse Tip:** One of the best parts of working with AI is that you can always ask it to explain what it wrote. If Claude generates a script and you are not sure what a line does, ask: "What does this line do?" You can also copy the code into ChatGPT, Gemini, or any other AI and ask for a plain-language explanation. Code itself rarely contains confidential information — it is the *data* that is sensitive, not the logic. That said, always review what you are pasting before sharing it with any AI tool. Strip out file paths, server names, or anything that reveals your environment before asking an external service to explain it. See [Safe AI Data Workflows](https://github.com/PythonMuse/ai-ledger/tree/main/articles/06-safe-ai-data-workflows) for more on this distinction.
 
 ---
 

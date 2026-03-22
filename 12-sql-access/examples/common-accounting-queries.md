@@ -11,6 +11,8 @@
 - Always test queries on a small date range first.
 - Use parameterized queries in Python to prevent SQL injection.
 
+> **Use sample or masked data when practicing.** These queries are designed to be adapted to real databases, but when learning, test against synthetic data first — not production systems with real customer names, vendor details, or financial records. For guidance on safe data handling, see [Safe AI Data Workflows](https://github.com/PythonMuse/ai-ledger/tree/main/articles/06-safe-ai-data-workflows). When you deploy AI-assisted queries against production data, make sure the workflow is properly logged — see [AI Governance for Controllers](https://github.com/PythonMuse/ai-ledger/tree/main/articles/07-ai-governance-for-controllers).
+
 ---
 
 ## 1. GL Detail for a Date Range

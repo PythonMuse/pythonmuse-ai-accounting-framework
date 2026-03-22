@@ -2,6 +2,8 @@
 
 *The tools that make Python practical for finance professionals. Start with the problem, not the library.*
 
+> **Practice with sample data only.** The code examples below reference generic file names and connection strings. When trying these out, use synthetic or masked data — not real company files, bank statements, or database credentials. For guidance on handling sensitive data with AI tools, see [Safe AI Data Workflows](https://github.com/PythonMuse/ai-ledger/tree/main/articles/06-safe-ai-data-workflows).
+
 ---
 
 ## pandas -- Your Programmable Spreadsheet

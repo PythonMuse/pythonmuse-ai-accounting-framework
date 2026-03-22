@@ -4,6 +4,10 @@
 
 ---
 
+> **Practice with sample data only.** The examples below use synthetic file names and data structures. When practicing these prompts, use the sample data provided with this framework or create your own masked test files. Never paste real company data — bank statements, GL exports, vendor details — into an AI tool without understanding your organization's data policies. For guidance, see [Safe AI Data Workflows](https://github.com/PythonMuse/ai-ledger/tree/main/articles/06-safe-ai-data-workflows). When you move toward production use, make sure each AI-assisted workflow is properly logged and governed — see [AI Governance for Controllers](https://github.com/PythonMuse/ai-ledger/tree/main/articles/07-ai-governance-for-controllers).
+
+---
+
 ## The Scenario
 
 You have a bank statement export (CSV) and a general ledger cash account export (CSV). You need to reconcile the two and identify unmatched items.
@@ -85,6 +89,81 @@ You have a bank statement export (CSV) and a general ledger cash account export 
 
 **What you get:** A complete, audit-ready reconciliation workflow that protects source data, applies your specific rules, and produces a documented output.
 
+But here is the real question: if you run this reconciliation every month, do you really want to explain all of this again in February? And again in March? Iteration 5 is a great prompt — but it is still a prompt. It lives in a chat window, and next month you start from scratch.
+
+Wouldn't it be better to drop in next month's bank statement and GL export, run the reconciliation, and watch it work — with one command, no re-explaining?
+
+---
+
+## Iteration 6: PythonMuse Accounting Framework
+
+**Prompt:**
+> "Let’s move beyond a one-time reconciliation and build something I can trust and reuse every month — the way a strong accounting process should work.
+
+> Apply PythonMuse principles:
+
+> - structured, repeatable workflows
+> - audit-ready outputs
+> - and controlled, local-first data handling
+
+> Think of this like documenting and training a new team member — the process should be clear enough that someone else (or future me) can run it without starting from scratch.
+>
+> Purpose:
+> - Create a month-end bank reconciliation workflow that is:
+>   - repeatable next month without rewriting instructions
+>   - transparent enough for audit review
+>   - protected so sensitive data never leaves the local environment
+>
+> What I need you to build:
+>
+> 1. **Bank Reconciliation SKILL**
+>    - Clearly document:
+>      - inputs (files, structure, location)
+>      - matching logic and thresholds
+>      - expected outputs
+>      - review checks and common exceptions
+>    - This should read like a procedure another accountant can follow
+> 2. **Local-First Reconciliation Agent**
+>    - Explicitly restrict access to local files only
+>    - Do not send source data outside the environment
+>    - Treat data/raw/ as read-only source evidence
+> 3. **Reusable Python Script**
+>    - Allow parameters for period and file paths
+>    - Ensure the same logic runs consistently each month
+>    - No manual rework required
+> 4. **Proof That It Works**
+>    - Run on sample data
+>    - Show results and explain how matches/unmatched items were determined
+>    - Highlight any edge cases or assumptions
+> 5. **Audit-Ready Outputs**
+>    - Save reconciliation results, summaries, and notes
+>    - Include enough detail to support review without re-running the process
+> 6. **Version-Control the Workflow**
+>    - Stage everything in git
+>    - So we can clearly see:
+>      - what changed
+>      - when it changed
+>      - and why
+>
+> Controls to enforce:
+>
+> - Source data remains unchanged
+> - All processing happens locally
+> - Rules are documented and reusable
+> - Results can be reproduced for any period
+>
+> End Result:
+> I should walk away with:
+>
+> - a reusable reconciliation process
+> - not just an answer for this month
+> - something I can rely on, explain, and defend if asked
+>
+> Build this like you’re helping me turn a manual task into a controlled accounting workflow — not just solving a one-time problem."
+
+**What you get:** A workflow that no longer depends on re-explaining the task every month. Instead of a single prompt, you now have a reusable procedure, a controlled execution pattern, a reproducible script, and version history that supports audit review.
+
+
 ---
 
 ## What Changed
@@ -96,8 +175,9 @@ You have a bank statement export (CSV) and a general ledger cash account export 
 | 3 | Rules and constraints | Accurate logic |
 | 4 | Output format | Usable deliverable |
 | 5 | Full specification | Audit-ready workflow |
+| 6 | Purpose, controls, reuse, and audit trail | Repeatable, reproducible, governed workflow |
 
-The difference between iteration 1 and iteration 5 is not a better "prompt trick." It is the same thing that makes a good engagement letter better than a vague email: clarity, specificity, and professional standards.
+The difference between iteration 1 and iteration 6 is not a better "prompt trick." It is the same thing that makes a good engagement letter better than a vague email: clarity, specificity, professional standards, and a process you can run again next month without starting from zero.
 
 ---
 

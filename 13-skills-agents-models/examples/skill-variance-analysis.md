@@ -2,6 +2,8 @@
 
 *A reusable skill for performing budget vs actuals variance analysis.*
 
+> **Validate with sample data first.** Before running this skill against real budget and actuals files, test it end-to-end with synthetic or masked data. This ensures the variance logic, thresholds, and outputs work as expected before real financial data is involved. See [Safe AI Data Workflows](https://github.com/PythonMuse/ai-ledger/tree/main/articles/06-safe-ai-data-workflows). Once validated, log the skill as part of your AI governance process — see [AI Governance for Controllers](https://github.com/PythonMuse/ai-ledger/tree/main/articles/07-ai-governance-for-controllers).
+
 ---
 
 ## Skill Name
