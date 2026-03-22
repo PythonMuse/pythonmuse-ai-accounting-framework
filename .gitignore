@@ -1,0 +1,75 @@
+# PythonMuse AI Accounting Framework - .gitignore
+# Designed for accounting and finance AI projects
+
+# ===========================
+# Sensitive Data (CRITICAL)
+# ===========================
+# Never commit real financial data, credentials, or client information
+*.env
+.env.*
+credentials.*
+secrets.*
+*.pem
+*.key
+
+# ===========================
+# Data Files
+# ===========================
+# Large data files should not be committed
+# Sample data in /data folders is intentionally tracked
+*.xlsx
+*.xls
+!10-excel-vs-csv/data/*.xlsx
+*.db
+*.sqlite
+*.sqlite3
+
+# ===========================
+# Python
+# ===========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+.eggs/
+venv/
+.venv/
+env/
+
+# ===========================
+# IDE and Editor
+# ===========================
+.vscode/
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+.DS_Store
+Thumbs.db
+desktop.ini
+
+# ===========================
+# OS
+# ===========================
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+ehthumbs.db
+
+# ===========================
+# Jupyter Notebooks
+# ===========================
+.ipynb_checkpoints/
+
+# ===========================
+# Logs
+# ===========================
+*.log
+logs/

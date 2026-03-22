@@ -1,0 +1,26 @@
+date,description,reference,debit,credit,balance
+2026-03-01,Beginning Balance,,,0.00,125430.00
+2026-03-01,ACH Deposit - Riverside Manufacturing,REF-20260301-001,0.00,12500.00,137930.00
+2026-03-02,Check #4521 - Office Supplies Plus,CHK-4521,850.00,0.00,137080.00
+2026-03-03,Wire Transfer - Meridian Financial,WIR-20260303-001,0.00,22000.00,159080.00
+2026-03-04,ACH Payment - Payroll,ACH-PAY-0304,45200.00,0.00,113880.00
+2026-03-04,ACH Payment - Payroll Taxes,ACH-TAX-0304,12800.00,0.00,101080.00
+2026-03-05,ACH Deposit - Atlas Engineering,REF-20260305-001,0.00,6800.00,107880.00
+2026-03-06,Debit Card - Amazon Business,DEB-20260306-001,234.50,0.00,107645.50
+2026-03-07,ACH Deposit - Riverside Manufacturing,REF-20260307-001,0.00,9100.00,116745.50
+2026-03-10,Check #4522 - City of Portland Utilities,CHK-4522,1850.00,0.00,114895.50
+2026-03-10,Bank Fee - Monthly Service,FEE-0310,45.00,0.00,114850.50
+2026-03-11,Wire Transfer Out - Insurance Premium,WIR-20260311-001,3200.00,0.00,111650.50
+2026-03-12,ACH Deposit - Pacific Coast Distributors,REF-20260312-001,0.00,3200.00,114850.50
+2026-03-14,Check #4523 - Greenfield Consulting,CHK-4523,7500.00,0.00,107350.50
+2026-03-15,ACH Deposit - Subscription Revenue,REF-20260315-001,0.00,8250.00,115600.50
+2026-03-17,Debit Card - Staples,DEB-20260317-001,178.25,0.00,115422.25
+2026-03-18,ACH Payment - Software Licenses,ACH-SW-0318,1875.00,0.00,113547.25
+2026-03-19,Wire Transfer - Coastal Properties LLC,WIR-20260319-001,0.00,7250.00,120797.25
+2026-03-20,Check #4524 - Marketing Agency,CHK-4524,4500.00,0.00,116297.25
+2026-03-21,ACH Payment - Payroll,ACH-PAY-0321,45200.00,0.00,71097.25
+2026-03-21,ACH Payment - Payroll Taxes,ACH-TAX-0321,12800.00,0.00,58297.25
+2026-03-24,ACH Deposit - Summit Healthcare,REF-20260324-001,0.00,4500.00,62797.25
+2026-03-25,Bank Fee - Wire Transfer Fee,FEE-0325,25.00,0.00,62772.25
+2026-03-27,Interest Earned,INT-0327,0.00,42.80,62815.05
+2026-03-31,Month End - Ending Balance,,,0.00,62815.05

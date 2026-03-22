@@ -1,0 +1,67 @@
+# .gitignore Template for Accounting AI Projects
+
+# ===========================
+# SENSITIVE DATA (CRITICAL)
+# ===========================
+*.env
+.env.*
+credentials.*
+secrets.*
+*.pem
+*.key
+*.pfx
+
+# ===========================
+# FINANCIAL DATA
+# ===========================
+data/raw/*.xlsx
+data/raw/*.xls
+*.db
+*.sqlite
+*.sqlite3
+*.bak
+
+# ===========================
+# PYTHON
+# ===========================
+__pycache__/
+*.py[cod]
+*$py.class
+*.so
+*.egg-info/
+dist/
+build/
+.eggs/
+venv/
+.venv/
+env/
+
+# ===========================
+# IDE AND EDITOR
+# ===========================
+.vscode/*
+!.vscode/settings.json
+!.vscode/extensions.json
+.idea/
+*.swp
+*.swo
+*~
+
+# ===========================
+# OPERATING SYSTEM
+# ===========================
+.DS_Store
+Thumbs.db
+desktop.ini
+ehthumbs.db
+
+# ===========================
+# JUPYTER NOTEBOOKS
+# ===========================
+.ipynb_checkpoints/
+
+# ===========================
+# LOGS
+# ===========================
+*.log
+logs/

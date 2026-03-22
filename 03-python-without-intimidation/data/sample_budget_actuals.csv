@@ -1,0 +1,21 @@
+account_number,account_name,department,budget_amount,actual_amount
+4100,Product Revenue,Sales,450000.00,472500.00
+4200,Service Revenue,Sales,180000.00,165000.00
+4300,Subscription Revenue,Sales,95000.00,98500.00
+4400,Other Revenue,Sales,12000.00,14200.00
+5100,Salaries and Wages,Operations,280000.00,285000.00
+5200,Employee Benefits,Operations,56000.00,58200.00
+5300,Rent Expense,Operations,36000.00,36000.00
+5400,Utilities,Operations,8500.00,9100.00
+5500,Insurance,Operations,12000.00,12000.00
+6100,Office Supplies,Admin,4500.00,5800.00
+6200,Software Subscriptions,Admin,18000.00,22500.00
+6300,Professional Fees,Admin,15000.00,24000.00
+6400,Travel and Entertainment,Admin,8000.00,6200.00
+6500,Training and Development,Admin,6000.00,3500.00
+7100,Marketing Expense,Marketing,25000.00,28500.00
+7200,Advertising,Marketing,15000.00,18200.00
+7300,Events and Conferences,Marketing,10000.00,4500.00
+8100,Depreciation,Finance,22000.00,22000.00
+8200,Interest Expense,Finance,9500.00,9800.00
+8300,Bank Fees,Finance,2400.00,2650.00

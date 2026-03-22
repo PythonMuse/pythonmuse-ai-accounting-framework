@@ -1,0 +1,23 @@
+account_number,account_name,department,debit_balance,credit_balance
+1010,Cash - Operating,Treasury,125430.00,0.00
+1020,Cash - Payroll,Treasury,28500.00,0.00
+1200,Accounts Receivable,Revenue,187250.00,0.00
+1300,Prepaid Expenses,Admin,12600.00,0.00
+1500,Fixed Assets,Operations,450000.00,0.00
+1510,Accumulated Depreciation,Operations,0.00,178000.00
+2010,Accounts Payable,Operations,0.00,67800.00
+2100,Accrued Liabilities,Operations,0.00,34500.00
+2200,Payroll Liabilities,HR,0.00,18750.00
+3010,Common Stock,Equity,0.00,100000.00
+3020,Retained Earnings,Equity,0.00,282430.00
+4100,Product Revenue,Sales,0.00,472500.00
+4200,Service Revenue,Sales,0.00,165000.00
+5100,Salaries and Wages,Operations,285000.00,0.00
+5200,Employee Benefits,Operations,58200.00,0.00
+5300,Rent Expense,Operations,36000.00,0.00
+6100,Office Supplies,Admin,5800.00,0.00
+6200,Software Subscriptions,Admin,22500.00,0.00
+6300,Professional Fees,Admin,24000.00,0.00
+7100,Marketing Expense,Marketing,28500.00,0.00
+8100,Depreciation,Finance,22000.00,0.00
+8200,Interest Expense,Finance,9800.00,0.00

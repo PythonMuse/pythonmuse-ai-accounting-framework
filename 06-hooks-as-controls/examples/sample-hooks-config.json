@@ -1,0 +1,23 @@
+{
+  "hooks": {
+    "PreToolUse": [
+      {
+        "matcher": "Edit|Write",
+        "hook": "python -c \"import sys, re; content=open(sys.argv[1]).read() if len(sys.argv)>1 else ''; patterns=[r'\\d{3}-\\d{2}-\\d{4}', r'\\b\\d{9}\\b']; matches=[p for p in patterns if re.search(p, content)]; sys.exit(1) if matches else sys.exit(0)\"",
+        "description": "Block writes containing SSN patterns"
+      },
+      {
+        "matcher": "Edit|Write",
+        "hook": "python -c \"import sys; path=sys.argv[1] if len(sys.argv)>1 else ''; sys.exit(1) if '/data/raw/' in path or '\\\\data\\\\raw\\\\' in path else sys.exit(0)\"",
+        "description": "Warn before modifying files in data/raw/"
+      }
+    ],
+    "PostToolUse": [
+      {
+        "matcher": "Write",
+        "hook": "echo 'File written: check outputs for accuracy'",
+        "description": "Log reminder after file writes"
+      }
+    ]
+  }
+}
