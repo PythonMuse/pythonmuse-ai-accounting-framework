@@ -73,3 +73,24 @@ ehthumbs.db
 # ===========================
 *.log
 logs/
+
+# ===========================
+# Screenshots
+# ===========================
+# Image files in screenshots folders are excluded from version control
+# Plan files (plan.md) are tracked so collaborators can see the shot list
+**/screenshots/*.png
+**/screenshots/*.jpg
+**/screenshots/*.gif
+
+# ===========================
+# Diagrams
+# ===========================
+# Image and source files in diagrams folders are excluded from version control
+# Plan files (plan.md) are tracked so collaborators can see the diagram list
+**/diagrams/*.png
+**/diagrams/*.jpg
+**/diagrams/*.gif
+**/diagrams/*.drawio
+**/diagrams/*.pptx
+**/diagrams/*.svg

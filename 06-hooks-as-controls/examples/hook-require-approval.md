@@ -2,6 +2,8 @@
 
 *A maker-checker control that pauses AI execution for human review.*
 
+> **This is simpler than it sounds.** The logic below describes a review gate — the AI pauses and waits for you to say "yes" before saving a file. You already do this mentally every time you review a report before sending it. This hook just makes that step automatic so it cannot be skipped. Ask Claude to set it up and it will be ready in minutes.
+
 ---
 
 ## Scenario

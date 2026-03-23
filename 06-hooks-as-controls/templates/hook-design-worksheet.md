@@ -2,6 +2,8 @@
 
 *Use this worksheet to plan a new control hook for your AI workflow. Fill in each section before implementing.*
 
+> **PythonMuse Tip:** You do not need to fill this out alone. Open this worksheet alongside Claude and work through it together. Describe the risk you are worried about, and Claude will help you design the hook, write the configuration, and test it. This worksheet is your thinking tool — Claude is your implementation partner. The whole process typically takes 15-20 minutes.
+
 ---
 
 ## Hook Overview

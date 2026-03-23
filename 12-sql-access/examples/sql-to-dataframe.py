@@ -4,6 +4,12 @@
 #
 # Demonstrates querying a database and loading results into a pandas DataFrame.
 # Uses SQLite for the example so it runs without an external database server.
+#
+# DATA NOTICE: This script creates a temporary SQLite database with synthetic
+# data for learning purposes. When adapting this pattern for real databases,
+# do not connect to production systems until you have reviewed your
+# organization's data handling and access policies.
+# See: https://github.com/PythonMuse/ai-ledger/tree/main/articles/06-safe-ai-data-workflows
 # =============================================================================
 
 import pandas as pd

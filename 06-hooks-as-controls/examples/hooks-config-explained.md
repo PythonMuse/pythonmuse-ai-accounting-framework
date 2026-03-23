@@ -2,6 +2,8 @@
 
 *A line-by-line explanation of the sample hooks configuration.*
 
+> **This looks more technical than it is.** If the configuration below seems intimidating, take a breath. You do not need to write any of this from scratch. You describe the control you want — "block the AI from writing files with Social Security numbers" — and Claude builds the hook for you. What looks like a page of configuration is really a 15-20 minute conversation with your AI assistant. Your job is to know *what* control you need. The AI handles the *how*.
+
 ---
 
 ## Overview
@@ -26,6 +28,8 @@ The `sample-hooks-config.json` file shows how to configure automated checks (hoo
 
 **Accounting parallel:** This is like a system control that rejects a payment if the payee information is incomplete or malformed. It prevents data exposure before it happens.
 
+> **PythonMuse Tip:** To create this hook, you would simply tell Claude: "I need a hook that blocks any file write if the content contains a Social Security number pattern." Claude writes the configuration. You review it, test it with sample data, and you are done. That is the whole process.
+
 ---
 
 ## Hook 2: Warn Before Modifying Raw Data
@@ -39,6 +43,8 @@ The `sample-hooks-config.json` file shows how to configure automated checks (hoo
 **Why this matters:** In accounting data workflows, raw data is your source of truth. It should never be modified. This hook enforces that rule automatically.
 
 **Accounting parallel:** This is like marking a workpaper as "original -- do not modify" and locking it from edits. The processed and output folders are where transformed data belongs.
+
+> **PythonMuse Tip:** This is one of the most valuable hooks you can set up, and it takes about two minutes. Tell Claude: "Add a hook that blocks any writes to files in data/raw/." That one sentence protects your source data from accidental modification — permanently.
 
 ---
 
@@ -58,6 +64,8 @@ The `sample-hooks-config.json` file shows how to configure automated checks (hoo
 
 ## How to Use This Configuration
 
+> **You do not need to memorize any of this.** The steps below are here for reference, but in practice you would ask Claude to set up the hooks for you. Walk through the conversation: "I want three controls — block SSN patterns, protect my raw data folder, and remind me to review every output." Claude will generate the configuration, place it in the right directory, and test it. The whole setup takes less than 20 minutes.
+
 1. Copy `sample-hooks-config.json` to your project's `.claude/` directory (or wherever your AI tool reads hook configurations)
 2. Adjust the patterns and paths to match your specific project
 3. Test each hook with sample data before relying on it with real workflows
@@ -66,6 +74,8 @@ The `sample-hooks-config.json` file shows how to configure automated checks (hoo
 ---
 
 ## Customization Ideas
+
+Every one of these is a single prompt to Claude. Describe the control; the AI builds it.
 
 - Add a hook that checks for email addresses in output files
 - Add a hook that enforces file naming conventions (e.g., outputs must include a date)

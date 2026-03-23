@@ -2,6 +2,8 @@
 
 *Use this template to document the permissions and data flow for each AI tool used in your projects.*
 
+> **Why this matters:** Every AI tool your team uses should have a documented permission profile — what it can access, where data goes, and what controls are in place. This is not just good practice; it is a governance requirement. For the broader context on why controllers need to own this process, see [AI Governance for Controllers](https://github.com/PythonMuse/ai-ledger/tree/main/articles/07-ai-governance-for-controllers). For a structured assessment framework you can adopt alongside this template, see the [AI Governance Assessments](https://github.com/PythonMuse/accounting_and_finance-ai-governance/tree/main/assessments).
+
 ---
 
 ## Tool Profile

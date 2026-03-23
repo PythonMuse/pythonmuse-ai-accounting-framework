@@ -4,6 +4,12 @@
 #
 # A beginner-friendly script that reads a CSV file and prints basic summaries.
 # Every line is commented so you can follow the logic step by step.
+#
+# DATA NOTICE: This script uses synthetic sample data. When learning or
+# experimenting, use the sample files provided or create your own masked
+# test data. Do not use real company data (bank transactions, GL exports)
+# until you have reviewed your organization's data policies.
+# See: https://github.com/PythonMuse/ai-ledger/tree/main/articles/06-safe-ai-data-workflows
 # =============================================================================
 
 # Step 1: Import the pandas library

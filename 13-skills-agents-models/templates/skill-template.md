@@ -2,6 +2,8 @@
 
 *Copy this template to define a new reusable AI skill for your accounting workflows.*
 
+> **Validate with sample data first.** Before running any new skill against real company data, test it end-to-end with synthetic or masked files. This confirms the logic, thresholds, and outputs work as expected before real financial data is involved. See [Safe AI Data Workflows](https://github.com/PythonMuse/ai-ledger/tree/main/articles/06-safe-ai-data-workflows). Once validated, log the skill as part of your AI governance process — see [AI Governance for Controllers](https://github.com/PythonMuse/ai-ledger/tree/main/articles/07-ai-governance-for-controllers).
+
 ---
 
 ## Skill Name

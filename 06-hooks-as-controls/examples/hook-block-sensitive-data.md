@@ -2,6 +2,8 @@
 
 *A preventive control that stops AI from processing files containing unmasked PII.*
 
+> **Don't let the technical detail scare you.** This article explains *what* the hook does and *why* it matters — that is the part you need to understand. The actual implementation? You tell Claude: "Build me a hook that blocks any file containing unmasked Social Security numbers or bank account numbers." Claude writes it, you test it with sample data, and you are protected. The whole thing takes about 15 minutes.
+
 ---
 
 ## Scenario

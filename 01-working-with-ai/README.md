@@ -81,7 +81,7 @@ You will see immediately why context matters.
 
 ### Exercise 2: The Iteration Loop
 
-Pick a small data file (a CSV with 20-30 rows). Ask the AI to analyze it. Then:
+Pick a small data file (a CSV with 20-30 rows). Use the sample data provided with this framework or create a masked test file — do not use real company data while learning. (See [Safe AI Data Workflows](https://github.com/PythonMuse/ai-ledger/tree/main/articles/06-safe-ai-data-workflows) for guidance.) Ask the AI to analyze it. Then:
 
 1. Ask it to change the output format
 2. Ask it to add a filter

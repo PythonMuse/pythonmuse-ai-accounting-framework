@@ -5,6 +5,12 @@
 # Budget vs actuals variance analysis.
 # Reads budget and actuals data, calculates variances, flags exceptions,
 # and prints a management-ready summary.
+#
+# DATA NOTICE: This script uses synthetic sample data. When learning or
+# experimenting, use the sample files provided or create your own masked
+# test data. Do not use real company data (budget figures, account balances)
+# until you have reviewed your organization's data policies.
+# See: https://github.com/PythonMuse/ai-ledger/tree/main/articles/06-safe-ai-data-workflows
 # =============================================================================
 
 import pandas as pd

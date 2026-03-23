@@ -2,6 +2,8 @@
 
 *A step-by-step view of how data moves from raw source files to a final reconciliation report.*
 
+> **This example uses synthetic data.** The file names, transaction counts, and dollar amounts shown below are illustrative. When building your own data flows, use sample or masked data during development. Do not place real company data into a project folder until you have confirmed your data handling policies. See [Safe AI Data Workflows](https://github.com/PythonMuse/ai-ledger/tree/main/articles/06-safe-ai-data-workflows).
+
 ---
 
 ## File Flow Diagram

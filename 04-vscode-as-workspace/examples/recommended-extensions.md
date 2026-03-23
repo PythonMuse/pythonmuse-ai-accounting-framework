@@ -38,6 +38,8 @@
 
 ## AI Extensions (Choose One)
 
+> **PythonMuse note:** PythonMuse currently uses GitHub Copilot in VS Code, which lets you choose Claude as your AI model. This gives you the best of both worlds — Copilot's tight VS Code integration with Claude's strength in reasoning, writing, and accounting context. You do not need to pick one AI tool forever; the framework is designed to work with whichever assistant you choose.
+
 ### Claude (Anthropic)
 
 **What it does:** Integrates Claude directly into VS Code as an AI assistant that can read your project files, write code, and execute scripts.
