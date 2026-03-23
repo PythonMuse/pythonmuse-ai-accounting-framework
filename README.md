@@ -112,4 +112,26 @@ See [LICENSE](LICENSE) and [LICENSE-CODE](LICENSE-CODE) for full details.
 
 ---
 
+## ⚠️ Disclaimer
+
+This repository is provided for educational purposes only.
+
+- Not accounting, audit, tax, or legal advice  
+- No guarantee of accuracy or completeness  
+- Use at your own risk  
+
+---
+
+### AI Usage Notice
+This repository may include AI-assisted workflows and scripts.
+
+Users must:
+- Validate all outputs independently  
+- Ensure data privacy and compliance  
+- Avoid using sensitive or confidential data without proper controls  
+
+PythonMuse LLC is not responsible for any outcomes resulting from use of this code.
+
+---
+
 *Built by [PythonMuse](https://github.com/PythonMuse) -- AI workflows for accounting professionals.*
