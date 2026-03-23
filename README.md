@@ -103,7 +103,12 @@ See [CONTRIBUTORS.md](CONTRIBUTORS.md) for everyone who has helped build this re
 
 ## License
 
-This project is licensed under the MIT License. See [LICENSE](LICENSE) for details.
+This project uses a dual license structure:
+
+- **Written content** (articles, templates, worksheets, examples, documentation) is licensed under [CC BY-NC-SA 4.0](LICENSE). Attribution required, non-commercial use only, share-alike.
+- **Python scripts** (`.py` files) are licensed under the [MIT License](LICENSE-CODE). Free to use, modify, and distribute.
+
+See [LICENSE](LICENSE) and [LICENSE-CODE](LICENSE-CODE) for full details.
 
 ---
 
