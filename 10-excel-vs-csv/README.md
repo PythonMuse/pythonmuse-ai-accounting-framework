@@ -15,6 +15,8 @@ It seems like a minor question. But the choice between Excel and CSV affects:
 
 **Best practice: CSV for processing, Excel for presentation.**
 
+Excel is not the problem, and this is not an argument for abandoning it. Excel owns presentation, review, and distribution -- the final output people actually read. Scripts own the middle layer: cleanup, transformation, row-by-row logic. **Scripts feed Excel. Excel communicates the results.**
+
 ---
 
 ## CSV: When to Use It
@@ -103,6 +105,8 @@ Most ERP systems offer export options. When exporting for AI processing:
 | File | Description |
 |------|-------------|
 | [sample_clean.csv](data/sample_clean.csv) | A well-formatted trial balance CSV |
+
+All data is synthetic. Use sample or masked data during development, and do not place real company data into a project folder until you have confirmed your data handling policies. See [Safe AI Data Workflows](https://github.com/PythonMuse/ai-ledger/tree/main/articles/06-safe-ai-data-workflows).
 
 ---
 

@@ -63,6 +63,19 @@ If you work with many PDFs, one of the first useful skills you should build is c
 
 ## Basic Syntax (With Accounting Examples)
 
+### Front Matter
+
+Some Markdown files -- especially the `SKILL.md` files elsewhere in this framework -- start with a block like this:
+
+```markdown
+---
+name: bank-reconciliation
+applies_to: data/raw/bank/*.csv
+---
+```
+
+That block is called **front matter**. It is metadata, written for scripts and hooks to read, not for a person to read as prose. See [Module 16](../16-configuration-literacy/) for the full treatment.
+
 ### Headers
 
 ```markdown
@@ -124,6 +137,33 @@ The formula for the variance percentage:
 > and a lease liability for all leases with terms greater
 > than 12 months.
 ```
+
+### Links
+
+```markdown
+See the [bank reconciliation policy](docs/policies/bank-recon.md) for the sign-off threshold.
+```
+
+### Nested Lists
+
+```markdown
+- Month-end close
+  - Bank reconciliation
+    - Match transactions
+    - Flag exceptions
+  - Accrual entries
+```
+
+---
+
+## Who Each File Is Written For
+
+Not every Markdown file in this framework has the same reader. Two show up constantly, and confusing them is a common mistake:
+
+| File | Written for | Answers |
+|---|---|---|
+| `README.md` | The human | What is this, why does it exist, where do I start |
+| `SKILL.md` | The AI | What is the procedure, what inputs, what checks |
 
 ---
 

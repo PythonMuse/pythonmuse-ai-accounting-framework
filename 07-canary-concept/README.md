@@ -28,6 +28,10 @@ The canary does the same thing for your AI workspace. Before you start working, 
 - Your workspace is loaded correctly
 - You are in the right project
 
+A canary is a **detection control** -- it tells you something is wrong, it does not prevent anything. See [Module 15](../15-validation-and-evidence/) for where detection sits relative to prevention.
+
+Worth stating plainly: the canary confirms the AI is reading your project files. It says nothing about whether the output is correct. Do not mistake it for validation.
+
 ---
 
 ## How It Works

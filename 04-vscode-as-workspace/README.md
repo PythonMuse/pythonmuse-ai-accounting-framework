@@ -1,4 +1,4 @@
-# VS Code as Your AI Workspace
+# Your Workspace -- VS Code as the Worked Example
 
 *Think of it as Windows Explorer for your AI workflows -- where files live, logic runs, and outputs are stored.*
 
@@ -15,6 +15,8 @@ Visual Studio Code is a free, Microsoft-backed code editor that has become the s
 - Everything is in one window instead of scattered across applications
 
 Think of it as the difference between having your reconciliation workpapers spread across five folders and email threads versus having them organized in a single binder.
+
+> **A note on tools.** VS Code is the worked example throughout this framework because it is free, widely approved, and works with every major AI assistant. The framework is not specific to it. Cursor, Windsurf, JetBrains, and the terminal-based tools all work the same way. What matters is that your files, your instructions, and your AI are in one place. See [Module 14](../14-ai-work-harness/) for what that arrangement is actually called.
 
 ---
 
@@ -73,6 +75,30 @@ If you have a Python script (for example, from the [Python Without Intimidation]
 | Terminal access | Built-in | None | None | None |
 | Markdown preview | Built-in | None | None | None |
 | Free | Yes | Requires license | Yes | Requires license |
+
+---
+
+## Extensions Are Software Vendors
+
+An extension is a third-party add-on that runs inside your workspace, with the access your workspace has. Installing one is a vendor decision, not a preference.
+
+Five questions before you install anything:
+
+1. **Who built it?** Look for a verified publisher badge. "Claude AI Assistant" is not necessarily Anthropic -- name impersonation in extension marketplaces is common.
+2. **How many people use it?** Install counts and reviews can be forged, so treat a high number as one signal rather than proof.
+3. **Is it open source?** Helpful, not sufficient. The XZ Utils backdoor in 2024 was in open source that thousands of people could read.
+4. **What does it actually do?** If the description does not explain the permissions it wants, that is the answer.
+5. **Is it actively maintained?** Last updated 2021 means unpatched.
+
+**Minimalism is a control.** Every extension is operational surface area. The fewer you run, the less there is to review, patch, and explain.
+
+| Extension | Publisher | Why |
+|---|---|---|
+| Python | Microsoft | Run and debug scripts |
+| GitHub Copilot | GitHub | AI assistance inside the editor |
+| Markdown All in One | Yu Zhang | Preview and shortcuts |
+
+See [approved-extensions-template.md](examples/approved-extensions-template.md) for a template to track what your team has approved and why.
 
 ---
 

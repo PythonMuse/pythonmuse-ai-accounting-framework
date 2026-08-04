@@ -62,6 +62,54 @@ Different AI tools have different permission levels. Before using any tool, unde
 
 Most AI tools allow you to configure these permissions. Use the principle of least privilege -- give the tool only the access it needs for the specific task.
 
+### What a Permission Actually Looks Like
+
+Permissions in most harnesses are a short configuration block you can read:
+
+```yaml
+permissions:
+  allowed_folders:
+    - data/raw
+    - data/processed
+    - outputs
+```
+
+Compare it with:
+
+```yaml
+permissions:
+  allowed_folders:
+    - /
+```
+
+The second grants the entire drive. Nothing errors. Nothing warns. This is the most common over-grant in practice, and reviewing for it takes about four seconds.
+
+See [Module 16](../16-configuration-literacy/) for reading these files generally.
+
+### The Three-Tier Folder Model
+
+| Tier | Folders | Rule |
+|---|---|---|
+| Write / create / modify | `outputs/`, `data/processed/` | Allowed |
+| Read-only | `data/raw/` | Never write -- source of truth |
+| Forbidden | Everything else | No access |
+
+### A Documented Placeholder Pattern
+
+The module above names masking but does not yet show it. Here is the pattern:
+
+| Field | Placeholder |
+|---|---|
+| Dollar amounts | `[AMT_1]` |
+| Headcount | `[HC_1]` |
+| Percentages | `[PCT_1]` |
+| Employee names | `[EMP_1]` |
+| Client / vendor names | `[CLIENT_1]` |
+| Tax IDs, SSNs | `[ID_1]` |
+| Bank / account numbers | `[ACCT_1]` |
+
+Safe to leave unmasked: column headers, field names, dates and periods, GL account codes, and structural logic. The structure is usually what you need help with; the values are what you need to protect.
+
 ---
 
 ## Questions to Ask Before Using Any AI Tool

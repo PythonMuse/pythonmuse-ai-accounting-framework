@@ -2,6 +2,14 @@
 
 *Reusable logic, AI assistants that follow instructions, and choosing the right model for the job.*
 
+```
+Prompts are where many of us start.
+Skills make the instructions reusable.
+Routines make the work repeatable.
+Controls make it safe.
+Evidence makes it audit-friendly.
+```
+
 ---
 
 ## Skills: Reusable Logic
@@ -30,6 +38,7 @@ A skill definition includes:
 4. **Steps** -- What the AI should do, in order
 5. **Output format** -- What the result should look like
 6. **Review checklist** -- How to verify the output
+7. **Front matter** -- a metadata block at the top of the file so scripts and hooks can act on it. See [Module 16](../16-configuration-literacy/).
 
 See the examples:
 - [Bank Reconciliation Skill](examples/skill-bank-recon.md)
@@ -71,6 +80,8 @@ You would not give a new intern access to everything on day one. You would:
 4. Expand their responsibilities as they prove reliable
 
 Do the same with AI agents.
+
+An agent's standing instructions live in a file at the root of your project -- `CLAUDE.md`, `AGENTS.md`, or whatever name your harness expects. [Module 14](../14-ai-work-harness/) covers what goes in it.
 
 ---
 
@@ -125,6 +136,14 @@ If you are a controller evaluating AI tools for your team, consider these dimens
 
 ---
 
+## Skills Are Institutional Memory
+
+A skill file is not just a time-saver. It is the written form of how your function does a thing -- which accounts are excluded, what materiality means here, which exception was created during the 2019 system conversion that everyone remembers and nobody documented.
+
+Written down, that knowledge outlasts the individual employee who held it and the individual AI model that helped write it. Unlike a conversation, a skill is not influenced by which model produced it. When a vendor upgrades the model, rebrands the product, or swaps the underlying AI entirely, the skill still says what it said.
+
+---
+
 ## Key Takeaway
 
 Skills give you consistency. Agents give you capacity. Models give you flexibility. Together, they turn AI from a chat tool into a operational capability for your accounting team.
@@ -133,4 +152,4 @@ Start with one skill (your most repetitive task), use it with one agent (a well-
 
 ---
 
-*This is the final section of the framework. Return to the [Table of Contents](../README.md).*
+*Next: [Your AI Work Harness and the Agent File](../14-ai-work-harness/) -- where skills, agents, and instructions actually live.*

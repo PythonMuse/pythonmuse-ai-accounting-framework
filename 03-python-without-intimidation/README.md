@@ -16,6 +16,16 @@ Python works the same way.
 
 The difference is that Python is written in something closer to plain English, which makes it -- in many cases -- easier to follow than nested Excel formulas.
 
+The vocabulary maps directly onto things you already do:
+
+| Accounting world | Programming world |
+|---|---|
+| SOP | Script |
+| Checklist | Algorithm |
+| Macro | Automation |
+| Excel formula | Instruction |
+| Month-end close process | Workflow |
+
 ---
 
 ## What Python Looks Like
@@ -60,6 +70,8 @@ Python is valuable in accounting because it is:
 - **Transparent.** Every step is visible. No hidden calculations buried in cell references.
 - **Audit-friendly.** The script is the documentation. Anyone can read it and understand what was done.
 - **Repeatable.** Run the same script next month with new data. Same process, same controls, no manual steps.
+
+Keep the scale in perspective: most accounting scripts are 20 to 100 lines. Not a system. A written procedure.
 
 And here is the key insight:
 
@@ -132,6 +144,24 @@ Each script is heavily commented so you can follow every step.
 | [sample_bank_transactions.csv](data/sample_bank_transactions.csv) | Bank statement transactions |
 
 All data is synthetic. No real financial information is included.
+
+---
+
+## Getting Libraries: pip and Environments
+
+Python out of the box can do math, text, logic, and loops. It cannot open an Excel file, build a chart, or read a PDF until you add a library.
+
+**pip** is how you add one. It stands for "Pip Installs Packages," and it runs in the terminal -- not inside a script:
+
+```bash
+pip install pandas
+```
+
+Libraries come from **PyPI**, a public index. Evaluate one the way you would evaluate an extension: who maintains it, how many people use it, when it was last updated, whether it is documented, whether an organisation stands behind it. pandas is maintained by NumFOCUS. Something with 40 downloads and no update since 2021 is a different proposition.
+
+**An environment** is a separate file drawer for each project -- that project's Python version, that project's libraries, nothing else. It matters for the reason everything else in this framework matters: without it, two projects can need different versions of the same library and quietly break each other, and a colleague cannot reproduce your results.
+
+> VS Code extensions are tools you add to your desk. Python libraries are skills you teach your assistant. Extensions help *you* work; libraries help *Python* work.
 
 ---
 

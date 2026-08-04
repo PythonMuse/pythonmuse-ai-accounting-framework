@@ -21,9 +21,11 @@ AI projects need the same discipline. Without it, you end up with scattered file
 
 ## The Three Key Files
 
-Every AI project should have these three files at the project root. Together, they form a persistent memory system that survives session resets.
+AI models work inside a **context window** -- a fixed budget of text covering your instructions, the files opened, and the conversation so far. Two things follow. When the session ends, that context is gone. When the window fills up, the earliest material gets squeezed out, silently.
 
-For a deeper dive on why these files matter and how they prevent lost work, see [Article 08: Why Claude Forgets](https://github.com/PythonMuse/ai-ledger/tree/main/articles/08-why-claude-forgets).
+That is the entire reason for the three files below. They are external memory for a system that has none.
+
+Every AI project should have these three files at the project root. Together, they form a persistent memory system that survives session resets.
 
 ### 1. plan.md -- The Engagement Letter
 
@@ -101,10 +103,23 @@ project/
 
   outputs/              Generated reports and results
 
+  evidence/             What ran, what tied out, what the reviewer concluded
+  validation/           Checks the workflow runs against itself
+
   docs/                 Notes, memos, reference material
 ```
 
 See: [folder-structure-template.md](templates/folder-structure-template.md)
+
+---
+
+## When You Cannot Restructure the Files
+
+Most accounting files cannot be reorganised. They have been used for three closes, several people touch them, they have linked cells, and they work.
+
+You do not fight that. You layer on top of it: create a `workings/` folder alongside the legacy files, with `data/`, `scripts/`, and `outputs/` inside. Legacy files stay untouched. Git runs inside `workings/` only. Your agent file lives inside `workings/`, not above it -- placement defines scope.
+
+Keeping `workings/` as a template repository you clone each year also gives you something useful: year over year, "did we run the same process?" becomes a `git diff` rather than a memory test.
 
 ---
 

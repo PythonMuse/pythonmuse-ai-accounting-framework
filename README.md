@@ -103,12 +103,43 @@ See [CONTRIBUTORS.md](CONTRIBUTORS.md) for everyone who has helped build this re
 
 ## License
 
+<<<<<<< HEAD
 This project uses a dual license:
 
 - **Written content** (articles, templates, worksheets, examples, documentation) is licensed under [CC BY-NC-SA 4.0](LICENSE) — you may share and adapt with attribution, for non-commercial purposes, under the same license.
 - **Python source code** (`.py` files) is licensed under the [MIT License](LICENSE-CODE) — free to use, modify, and distribute.
 
 See [LICENSE](LICENSE) and [LICENSE-CODE](LICENSE-CODE) for full details.
+=======
+This project uses a dual license structure:
+
+- **Written content** (articles, templates, worksheets, examples, documentation) is licensed under [CC BY-NC-SA 4.0](LICENSE). Attribution required, non-commercial use only, share-alike.
+- **Python scripts** (`.py` files) are licensed under the [MIT License](LICENSE-CODE). Free to use, modify, and distribute.
+
+See [LICENSE](LICENSE) and [LICENSE-CODE](LICENSE-CODE) for full details.
+
+---
+
+## ⚠️ Disclaimer
+
+This repository is provided for educational purposes only.
+
+- Not accounting, audit, tax, or legal advice  
+- No guarantee of accuracy or completeness  
+- Use at your own risk  
+
+---
+
+### AI Usage Notice
+This repository may include AI-assisted workflows and scripts.
+
+Users must:
+- Validate all outputs independently  
+- Ensure data privacy and compliance  
+- Avoid using sensitive or confidential data without proper controls  
+
+PythonMuse LLC is not responsible for any outcomes resulting from use of this code.
+>>>>>>> 527613578be6dcc9e04617b2c519c284b379c706
 
 ---
 

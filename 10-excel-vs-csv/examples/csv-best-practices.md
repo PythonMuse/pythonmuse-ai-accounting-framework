@@ -2,6 +2,8 @@
 
 *How to format CSV files so they work cleanly with Python and AI tools.*
 
+> **A note on data.** These examples use synthetic data. Use sample or masked data during development, and do not place real company data into a project folder until you have confirmed your data handling policies. See [Safe AI Data Workflows](https://github.com/PythonMuse/ai-ledger/tree/main/articles/06-safe-ai-data-workflows).
+
 ---
 
 ## Date Format: YYYY-MM-DD

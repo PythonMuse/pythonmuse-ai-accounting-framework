@@ -21,6 +21,20 @@ Hooks are the same concept applied to AI: "Before this action runs, check this c
 
 ---
 
+## Guidance Is Not Enforcement
+
+A rule written in Markdown asks the AI to behave. A hook makes the behaviour non-optional.
+
+A policy stating that payments over $10,000 require dual sign-off is important. A system that refuses to release the payment without the second approval is stronger. Both matter. Only one actually stops the error.
+
+This is where hooks sit on the control ladder:
+
+> Metadata informs. **Scripts validate. Hooks enforce.** Evidence proves.
+
+Use a hook when you cannot afford the instruction to be ignored.
+
+---
+
 ## Why Hooks Matter
 
 Without hooks, your AI workflow is like a general ledger with no approval controls. Anyone (or anything) can post entries, modify data, and generate outputs without oversight.
@@ -85,6 +99,10 @@ A hook that warns or blocks any attempt to modify files in the `data/raw/` direc
 
 See: [sample-hooks-config.json](examples/sample-hooks-config.json) and [hooks-config-explained.md](examples/hooks-config-explained.md)
 
+### Example 4: Manifest-Aware Blocking
+
+A hook reads `input_manifest.csv`, blocks any file whose `status` is `draft` or `superseded`, and writes the result to `evidence/`. Three rungs of the ladder operating together. See [Module 16](../16-configuration-literacy/).
+
 ---
 
 ## Designing Your First Hook
@@ -112,6 +130,8 @@ For organizations subject to SOX or following COSO frameworks, hooks map directl
 | Monitoring Activities | Post-execution validation and review |
 
 Hooks are not a replacement for your existing control framework. They are an extension of it into AI-assisted workflows.
+
+A control that operates without leaving a record cannot be shown to have operated -- see [Module 15](../15-validation-and-evidence/) for the evidence side of this.
 
 ---
 

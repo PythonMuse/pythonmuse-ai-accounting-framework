@@ -21,6 +21,8 @@ This is version control. It is just bad version control.
 
 Git does the same thing, but properly: every version is tracked, every change is documented, and you can go back to any point in history without keeping fifteen copies of the same file.
 
+**Scope note:** run Git inside a `workings/` folder, not at the root of a shared drive. Most accounting files cannot be reorganised around Git -- they have been used for multiple closes and several people touch them. Layer Git on top instead. See [Module 08](../08-project-hygiene/) for the `workings/` pattern.
+
 ---
 
 ## The Accounting Analogy
@@ -85,6 +87,18 @@ This sends your saved checkpoints to GitHub (or Azure DevOps), creating an off-s
 | Security | Strong; fine-grained permissions | Enterprise-grade; AD integration |
 
 **Start with GitHub.** It is simpler to learn and has better integration with AI tools. When your organization needs enterprise controls, Azure DevOps is there.
+
+---
+
+## What Not to Track
+
+Add `data/raw/` to `.gitignore`. Source data is not what version control is for -- it belongs in the raw tier described in [Module 09](../09-data-structure/), untouched and outside history, not committed alongside your scripts and outputs.
+
+---
+
+## The Year-Over-Year Use
+
+Keep your project as a template repository and clone it fresh each year. "Did we run the same process as last year?" stops being a memory test and becomes a `git diff`.
 
 ---
 

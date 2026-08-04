@@ -33,7 +33,7 @@ This is not a new skill for accountants. It is exactly how you work with a junio
 | No verification | Review against source data |
 | Disposable interaction | Documented workflow |
 
-Most "prompt engineering" advice focuses on the left column. What actually produces reliable results in accounting is the right column.
+Technique matters less than context and review, and most "prompt engineering" advice overstates it. Three techniques do earn their keep: give the AI a role, give it an example of what you want, and ask for a specific output shape. Beyond that, what actually produces reliable results in accounting is the right column above.
 
 ---
 
@@ -63,6 +63,14 @@ Every output from AI should be treated the same way you treat work from a staff 
 - **Is the logic transparent?** Can you explain how the output was produced? If not, ask the AI to show its work.
 
 This is not about distrusting the tool. It is about applying the same professional skepticism you already use every day.
+
+### Why Review Is Not Optional
+
+AI models are trained toward answers that read well -- complete, confident, well organised. The training reward is response quality, not accuracy. Most of the time those coincide, which is exactly what makes the exceptions dangerous: a well-supported answer and an invented one look identical on the page.
+
+This is not a defect a future model release fixes. Design around it.
+
+Also worth knowing: asking "are you sure?" is not a control. You are querying the same source that produced the problem. A real check looks outward -- to the source data, to the totals, to something that can disagree.
 
 ---
 

@@ -61,6 +61,13 @@ The simplest definition: **a DataFrame is an Excel table, but programmable and r
 
 It has rows and columns. You can filter, sort, group, and calculate -- just like Excel. The difference is that every operation is a line of code, which means it can be repeated, documented, and audited.
 
+Two more terms worth having:
+
+- **API** -- a defined way for one system to ask another for something. Placing a kitchen order: you do not enter the kitchen, you submit a request in a format they accept.
+- **ETL** -- Extract, Transform, Load. Pull the data out, reshape it, put it somewhere usable. You have done this by hand every time you exported a report and cleaned it in Excel.
+
+SQL is the Data layer of the four layers in [Module 16](../16-configuration-literacy/). Newer tooling that lets AI reach systems conversationally sits *on top of* SQL and APIs -- it does not replace them.
+
 ---
 
 ## Common Scenarios for SQL Access

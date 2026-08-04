@@ -84,6 +84,21 @@ That is it. Two scripts, three folders, complete traceability.
 
 ---
 
+## The Labelling Layer
+
+The three-tier structure above covers how to shape a table. The layer above it is how you label the files and folders themselves, so a script -- or an AI -- can tell what it is looking at without opening it.
+
+A **manifest** is an inventory of your inputs, one row per file, with columns like:
+
+| file | data_classification | approved_for_ai |
+|---|---|---|
+| `data/raw/bank_statement_march_2026.csv` | confidential | masked-only |
+| `data/processed/bank_clean_march_2026.csv` | internal | yes |
+
+`data_classification` and `approved_for_ai` belong on any input inventory -- they are what a hook checks before it acts. See [Module 16](../16-configuration-literacy/) for the full treatment of manifests and configuration files.
+
+---
+
 ## Examples
 
 | Pipeline | Raw | Processed | Output |
