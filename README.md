@@ -73,6 +73,7 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for how to submit examples, use cases, te
 | 15 | [Validation and Evidence](15-validation-and-evidence/) | Making AI output reviewable, not just correct |
 | 16 | [Configuration Literacy](16-configuration-literacy/) | Reading YAML, JSON, JSON Lines, front matter, and manifests -- the files that steer AI |
 | 17 | [Routines](17-routines/) | Work that runs on a schedule without you in the room |
+| 19 | [Decision Models](19-decision-models/) | Choosing the method for each step -- rules, decision model, LLM, or person |
 
 ---
 
