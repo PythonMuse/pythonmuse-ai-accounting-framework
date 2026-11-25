@@ -1,0 +1,6 @@
+{"time": "2026-07-01T06:00:00", "event": "run_started", "routine": "ap-accrual-draft", "triggered_by": "schedule"}
+{"time": "2026-07-01T06:00:04", "event": "file_read", "file": "ap_open_items_2026-06.csv", "rows": 214, "manifest_status": "final"}
+{"time": "2026-07-01T06:00:07", "event": "exception", "item": "INV-90311", "reason": "no receiving record", "amount": 480.00}
+{"time": "2026-07-01T06:00:07", "event": "exception", "item": "INV-90327", "reason": "amount over threshold", "amount": 12400.00}
+{"time": "2026-07-01T06:00:09", "event": "draft_written", "file": "outputs/je_draft_2026-06.json", "entries": 1}
+{"time": "2026-07-01T06:00:09", "event": "run_finished", "status": "needs_review", "exceptions": 2}

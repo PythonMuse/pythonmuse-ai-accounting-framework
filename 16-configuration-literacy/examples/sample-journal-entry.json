@@ -1,0 +1,15 @@
+{
+  "entry_id": "JE-2026-0412",
+  "entity": "Harbor Office Supply (fictional)",
+  "period": "2026-06",
+  "entry_date": "2026-06-30",
+  "description": "Accrue June office supplies invoice not yet received",
+  "source": "ai_draft",
+  "prepared_by": "staff_accountant",
+  "approved": false,
+  "approved_by": null,
+  "lines": [
+    { "account": "6100 Office Supplies", "debit": 1250.00, "credit": 0 },
+    { "account": "2000 Accounts Payable", "debit": 0, "credit": 1250.00 }
+  ]
+}
