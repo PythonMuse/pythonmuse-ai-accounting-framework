@@ -120,6 +120,8 @@ Ask yourself:
 
 See [model-selection-guide.md](examples/model-selection-guide.md) for a detailed decision matrix.
 
+Before choosing a tier, ask whether the step needs a model at all. [Module 19: Decision Models](../19-decision-models/) covers how to classify each step as a rule, a decision model, an LLM, or a person's judgment.
+
 ---
 
 ## The Controller's Framework for AI Tool Selection
