@@ -1,4 +1,4 @@
-# Configuration Literacy -- YAML, Front Matter, and Manifests
+# Configuration Literacy -- YAML, JSON, Front Matter, and Manifests
 
 *A configuration file is a written procedure that a computer can read. You already write procedures.*
 
@@ -21,7 +21,7 @@ A working AI workflow usually has four kinds of file in it. Knowing which is whi
 | Layer | File type | What it handles | Accounting analogy |
 |-------|----------|----------------|-------------------|
 | **Logic** | Python `.py` | Calculations, transformations, steps | The associate running the process |
-| **Configuration** | YAML `.yaml` | Structure, triggers, permissions, sequence | The written SOP the associate follows |
+| **Configuration** | YAML `.yaml` or JSON `.json` | Structure, triggers, permissions, sequence | The written SOP the associate follows |
 | **Data** | SQL `.sql` | Pulling records from a database | The query that runs against your ERP |
 | **Instructions** | Markdown `.md` | Agent guidance, controls, documentation | The policy memo governing the whole thing |
 
@@ -71,6 +71,117 @@ permissions:
 That reads harmlessly. It grants access to the entire drive. The difference between that and `- data/raw` is one character, and no error will be raised -- the workflow will simply be able to reach everything.
 
 This is why configuration literacy is a control skill rather than a technical one. The file is short, plain English, and load-bearing.
+
+---
+
+## Reading JSON and JSON Lines
+
+JSON (pronounced "jason") is YAML's more formal cousin. You will meet it in AI tool settings, system exports, and the logs a workflow leaves behind.
+
+### What it is and why it exists
+
+JSON is a plain text format for passing a record from one system to another. It is strict enough for a program to read without guessing, and plain enough for a person to read without software. Open one in Notepad or VS Code and you can follow it.
+
+That is the whole reason it exists: two systems need to agree on what a record looks like, and a person occasionally needs to check what was sent.
+
+### How to read one
+
+Three patterns, the same three as YAML, with punctuation instead of indentation.
+
+**A field is a label and a value.** Labels are always in double quotes. Text values are in quotes; numbers, `true`, `false`, and `null` (meaning "empty") are not.
+```json
+{
+  "entry_id": "JE-2026-0412",
+  "amount": 1250.00,
+  "approved": false,
+  "memo": null
+}
+```
+
+**Curly braces `{ }` group fields into one record.** A record can sit inside another record. That is nesting.
+```json
+{
+  "vendor": {
+    "name": "Harbor Office Supply",
+    "terms": "Net 30"
+  }
+}
+```
+
+**Square brackets `[ ]` hold a list.** Items are separated by commas.
+```json
+{
+  "approvers": ["controller", "cfo"]
+}
+```
+
+In JSON, the braces, brackets, and commas carry the structure. The indentation is only there for human eyes. One missing comma and the whole file is unreadable to the program -- the JSON equivalent of an out-of-balance entry that will not post.
+
+### The accounting analogy
+
+A JSON record is a journal entry: a header with labeled fields, and a list of lines underneath.
+
+```json
+{
+  "entry_id": "JE-2026-0412",
+  "entity": "Harbor Office Supply (fictional)",
+  "period": "2026-06",
+  "prepared_by": "staff_accountant",
+  "approved": false,
+  "lines": [
+    { "account": "6100 Office Supplies", "debit": 1250.00, "credit": 0 },
+    { "account": "2000 Accounts Payable", "debit": 0, "credit": 1250.00 }
+  ]
+}
+```
+
+The header fields are the top of the entry form. `lines` is a list, and each item in it is a small record of its own. If you can review this entry on paper, you can review it here. The full file is in [sample-journal-entry.json](examples/sample-journal-entry.json).
+
+### JSON vs CSV vs YAML
+
+| Format | Shape | Written mainly for | Where you meet it |
+|--------|-------|--------------------|-------------------|
+| **CSV** | Flat rows and columns | Spreadsheets | Exports, manifests, anything you open in Excel |
+| **JSON** | Records that can nest | Programs, readable by people | System and API exports, AI tool settings, logs |
+| **YAML** | Records that can nest | People, readable by programs | Workflow configuration a person is expected to edit |
+
+Rule of thumb: if it fits in a grid, it is usually a CSV. If one record contains a list of other records -- an entry with its lines, an invoice with its line items -- it is usually JSON. If a person is meant to maintain it by hand, it is often YAML.
+
+See [Excel vs CSV](../10-excel-vs-csv/) for the flat-file side of the story.
+
+### JSON Lines: one record per line
+
+**JSON Lines** (file ending `.jsonl`) is JSON with one rule added: each line is one complete record. No surrounding brackets, no commas between lines.
+
+```
+{"time": "2026-07-01T06:00:00", "event": "run_started", "routine": "ap-accrual-draft"}
+{"time": "2026-07-01T06:00:04", "event": "file_read", "file": "ap_open_items_2026-06.csv", "rows": 214}
+{"time": "2026-07-01T06:00:09", "event": "run_finished", "status": "needs_review", "exceptions": 2}
+```
+
+It is the natural format for logs, for the same reasons a subledger is:
+
+- **New activity is added at the bottom.** Nothing above it has to be rewritten.
+- **One bad line does not spoil the rest.** Every other record still reads.
+- **One line, one event.** Counting lines counts events, and you can scan it top to bottom like a register.
+
+When a routine or an AI tool keeps a record of what it did, it is very often a `.jsonl` file. That makes it evidence, and it gets reviewed like evidence. A longer fictional example is in [sample-run-log.jsonl](examples/sample-run-log.jsonl).
+
+### AI drafts it. You verify it.
+
+You will rarely write JSON by hand. AI will draft the settings file, the export mapping, or the log format, and it will usually be valid on the first try.
+
+Valid is not the same as right. A program checks that the commas are in place. Only you can check that the amount, the period, and the approval flag are what they should be. Your job is the same one you have with any prepared entry: read it and sign off, or send it back.
+
+### How to review one
+
+Before you rely on a JSON or JSON Lines file, check three things:
+
+1. **Do the values look right?** Amounts, dates, periods, and signs are what you expect. Totals tie -- debits equal credits. `true` and `false` mean what was intended, especially on anything that grants access or approval.
+2. **Is anything missing?** Required fields are present and not `null` or blank. Field names are spelled consistently (`"approved"` and `"aproved"` are two different fields to a program). Watch for extra fields nobody asked for.
+3. **Does it contain anything sensitive?** Bank or card numbers, personal data, real client or employee names, passwords, API keys, or tokens. Settings files and logs are where secrets most often leak, because nobody thinks of them as documents.
+
+A reusable version is in [json-review-checklist.md](templates/json-review-checklist.md).
 
 ---
 
@@ -175,6 +286,7 @@ Metadata is boring right up until your AI grabs the wrong file.
 2. Add front matter to one skill file, with `data_classification` and `cloud_ai_allowed` filled in honestly.
 3. Build a manifest for one real project folder. Default everything to `needs_review`, then go through and make the calls.
 4. Find one rule currently living in prose that a script could check instead.
+5. Open [sample-hooks-config.json](../06-hooks-as-controls/examples/sample-hooks-config.json) from Module 06 and find the fields, the nesting, and the lists. Then run it through the [JSON review checklist](templates/json-review-checklist.md).
 
 ---
 
@@ -182,7 +294,7 @@ Metadata is boring right up until your AI grabs the wrong file.
 
 Configuration files are short, plain, and consequential. You do not have to write them -- you have to review them, because a permission line or a status column can change what a workflow reaches and which data it picks up.
 
-Read the YAML. Fill in the front matter. Keep the manifest current. This is the "metadata informs" rung of the ladder, and it is the cheapest control in the framework.
+Read the YAML and the JSON. Fill in the front matter. Keep the manifest current. This is the "metadata informs" rung of the ladder, and it is the cheapest control in the framework.
 
 ---
 

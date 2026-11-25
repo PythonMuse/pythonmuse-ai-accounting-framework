@@ -69,6 +69,10 @@ See [CONTRIBUTING.md](CONTRIBUTING.md) for how to submit examples, use cases, te
 | 11 | [Git for Accountants](11-git-for-accountants/) | Version control as your audit trail |
 | 12 | [SQL Access](12-sql-access/) | Working with IT for direct database access |
 | 13 | [Skills, Agents, and Models](13-skills-agents-models/) | Reusable logic, AI assistants, and choosing the right model |
+| 14 | [Your AI Work Harness](14-ai-work-harness/) | The agent file and the tooling around it -- the governance is yours |
+| 15 | [Validation and Evidence](15-validation-and-evidence/) | Making AI output reviewable, not just correct |
+| 16 | [Configuration Literacy](16-configuration-literacy/) | Reading YAML, JSON, JSON Lines, front matter, and manifests -- the files that steer AI |
+| 17 | [Routines](17-routines/) | Work that runs on a schedule without you in the room |
 
 ---
 
@@ -103,24 +107,16 @@ See [CONTRIBUTORS.md](CONTRIBUTORS.md) for everyone who has helped build this re
 
 ## License
 
-<<<<<<< HEAD
 This project uses a dual license:
 
 - **Written content** (articles, templates, worksheets, examples, documentation) is licensed under [CC BY-NC-SA 4.0](LICENSE) — you may share and adapt with attribution, for non-commercial purposes, under the same license.
 - **Python source code** (`.py` files) is licensed under the [MIT License](LICENSE-CODE) — free to use, modify, and distribute.
 
 See [LICENSE](LICENSE) and [LICENSE-CODE](LICENSE-CODE) for full details.
-=======
-This project uses a dual license structure:
-
-- **Written content** (articles, templates, worksheets, examples, documentation) is licensed under [CC BY-NC-SA 4.0](LICENSE). Attribution required, non-commercial use only, share-alike.
-- **Python scripts** (`.py` files) are licensed under the [MIT License](LICENSE-CODE). Free to use, modify, and distribute.
-
-See [LICENSE](LICENSE) and [LICENSE-CODE](LICENSE-CODE) for full details.
 
 ---
 
-## ⚠️ Disclaimer
+## Disclaimer
 
 This repository is provided for educational purposes only.
 
@@ -139,7 +135,6 @@ Users must:
 - Avoid using sensitive or confidential data without proper controls  
 
 PythonMuse LLC is not responsible for any outcomes resulting from use of this code.
->>>>>>> 527613578be6dcc9e04617b2c519c284b379c706
 
 ---
 
